@@ -15,3 +15,43 @@ paths:
       responses:
         200:
           description: Return system status
+  /pilotos:
+    get:
+      operationId: server.controllers.pilotos_controller.get_pilotos
+      summary: retorna todos os pilotos disponiveis da API
+      responses:
+        200:
+          description: sucesso
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Piloto"
+definitions:
+  Piloto:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      nome:
+        type: "string"
+      nacionalidade:
+        type: "string"
+      cidade_natal:
+        type: "string"
+      nascimento:
+        type: "string"
+      vitorias:
+        type: "integer"
+        minimum: 0
+      corridas_participadas:
+        type: "integer"
+        minimum: 0
+      pole_positions:
+        type: "integer"
+        minimum: 0
+      podios:
+        type: "integer"
+        minimum: 0
+      biografia:
+        type: "string"
+        minimum: 0
