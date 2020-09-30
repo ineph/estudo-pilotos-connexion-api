@@ -26,7 +26,52 @@ paths:
             type: "array"
             items:
               $ref: "#/definitions/Piloto"
+    post:
+      operationId: server.controllers.pilotos_controller.post_piloto
+      summary: cadastra novo piloto
+      parameters:
+        - in: body
+          name: piloto_input
+          description: dados do piloto
+          required: true
+          schema:
+            $ref: "#/definitions/PilotoInput"
+      responses:
+        "201":
+          description: "cadastrado novo piloto"
+          schema:
+            type: "array"
+            items:
+                $ref: "#/definitions/PilotoInput"
 definitions:
+  PilotoInput:
+    type: "object"
+    properties:
+      nome:
+        type: "string"
+      nacionalidade:
+        type: "string"
+      cidade_natal:
+        type: "string"
+      nascimento:
+        type: "string"
+      vitorias:
+        type: "integer"
+        minimum: 0
+      corridas_participadas:
+        type: "integer"
+        minimum: 0
+      pole_positions:
+        type: "integer"
+        minimum: 0
+      voltas_mais_rapidas:
+        type: "integer"
+        minimum: 0
+      podios:
+        type: "integer"
+        minimum: 0
+      biografia:
+        type: "string"
   Piloto:
     type: "object"
     properties:
