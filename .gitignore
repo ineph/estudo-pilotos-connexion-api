@@ -1,4 +1,6 @@
-#custom
+# byte-compiled / optimized / DLL files
 __pycache__/
+
+# custom
 venv/
 .idea/

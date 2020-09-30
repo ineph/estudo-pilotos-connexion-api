@@ -20,8 +20,8 @@ paths:
       operationId: server.controllers.pilotos_controller.get_pilotos
       summary: retorna todos os pilotos disponiveis da API
       responses:
-        200:
-          description: sucesso
+        "200":
+          description: "sucesso"
           schema:
             type: "array"
             items:
@@ -49,9 +49,11 @@ definitions:
       pole_positions:
         type: "integer"
         minimum: 0
+      voltas_mais_rapidas:
+        type: "integer"
+        minimum: 0
       podios:
         type: "integer"
         minimum: 0
       biografia:
         type: "string"
-        minimum: 0
