@@ -1,0 +1,17 @@
+swagger: '2.0'
+info:
+  title: Pilotos
+  version: "0.1"
+  description: Exemplo simples de API contendo infomrações sobre pilotos
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /test:
+    get:
+      operationId: server.controllers.check_status.test
+      summary: Verifica status do sistema (online ou não)
+      responses:
+        200:
+          description: Return system status
